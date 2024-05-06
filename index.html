@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/build/tailwind.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>PMP</title>
+    <style>
+      .custom-bg {
+        position: relative;
+        z-index: 0;
+        background-image: url("moroccanPattern.jpg");
+        background-repeat: repeat;
+        background-size: 200px; /* Adjust the size here to maintain the aspect ratio */
+        overflow: hidden;
+      }
+
+      .custom-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: inherit; /* Use the same background image */
+        filter: blur(8px); /* Adjust blur radius as needed */
+        z-index: -1; /* Ensures the blur is behind the content */
+      }
+      .custom-bg2 {
+        position: relative;
+        z-index: 0;
+        background-image: url("moroccanPattern.jpg");
+        background-repeat: repeat;
+        background-size: 200px; /* Adjust the size here to maintain the aspect ratio */
+        overflow: hidden;
+      }
+      .overlay {
+        background-color: rgb(255, 255, 255);
+        z-index: 2; /* Adjust opacity as needed */
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevent scrolling */
+      }
+      .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        padding-bottom: 50px; /* Padding from the tail of the viewport */
+      }
+      iframe {
+        width: 50%; /* Width of the iframe */
+        height: 87vh; /* Height of the iframe, 90% of the viewport height */
+        border-radius: 20px; /* Rounded corners */
+        border: none; /* No border */
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <div class="overlay py-4 px-8 relative custom-bg">
+      <div class="flex justify-between items-center">
+        <!-- Left Side - Logo and Arabic Text -->
+        <div class="flex items-center">
+          <img src="royaume_du_maroc_logo.png" alt="Logo" class="h-20 mr-4" />
+        </div>
+
+        <!-- Right Side - Emblem and French Text -->
+        <div class="flex items-center">
+          <img src="logo_pmp.png" alt="Emblem" class="h-20 ml-4" />
+        </div>
+      </div>
+    </div>
+    <div class="iframe-container custom-bg2">
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/vaWO65hVvRo2NLzhDF6mu"
+        title="Chatbot"
+      ></iframe>
+    </div>
+  </body>
+</html>
