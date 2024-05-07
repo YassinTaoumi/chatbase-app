@@ -3,6 +3,8 @@
 body,
 [class*="css"] {
   text-align: right;
+  background-image: url("moroccanPattern.jpg");
+  background-repeat: repeat;
 }
 
 p {
