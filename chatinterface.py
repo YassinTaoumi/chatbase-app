@@ -11,8 +11,6 @@ VOICE_ID = "XB0fDUnXU5powFXDhCwa"  # ID of the voice model to use
 # TEXT_TO_SPEAK = "text"
 OUTPUT_PATH = "output.mp3"
 
-with open("style.css") as css:
-    st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 # Displaying logos at the top
 col1, col2, col3, col4 = st.columns(4)
