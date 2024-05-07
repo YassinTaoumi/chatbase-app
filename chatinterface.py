@@ -101,7 +101,7 @@ if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟
             # Read the response in chunks and write to the file
             for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                 f.write(chunk)
-        st.audio("output.mp3", format="audio/mpeg", loop=True)
+        st.audio("output.mp3", format="audio/mpeg")
     else:
         # Print the error message if the request was not successful
         print(response.text)
