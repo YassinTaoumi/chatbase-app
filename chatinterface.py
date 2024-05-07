@@ -5,7 +5,7 @@ import json
 import pygame
 
 CHUNK_SIZE = 1024  # Size of chunks to read/write at a time
-XI_API_KEY = "60747453e253e4abae809501c989569c"  # Your API key for authentication
+XI_API_KEY = st.secrets["labs_api_key"]  # Your API key for authentication
 VOICE_ID = "XB0fDUnXU5powFXDhCwa"  # ID of the voice model to use
 # Text you want to convert to speech
 # TEXT_TO_SPEAK = "text"
@@ -29,7 +29,7 @@ st.title("المساعد الخاص برئاسة النيابة العامة")
 url = 'https://www.chatbase.co/api/v1/chat'
 headers = {
     # Replace <API-KEY> with your actual API key
-    'Authorization': 'Bearer 97066449-4d98-4f5e-993a-056589ea3190',
+    'Authorization': 'Bearer '+st.secrets["chatbase_api_key"],
     'Content-Type': 'application/json'
 }
 
