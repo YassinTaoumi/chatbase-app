@@ -16,13 +16,13 @@ with open('style.css') as f:
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 
-# Displaying logos at the top
-col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    st.image("royaume_du_maroc_logo.png", width=200, output_format='auto')
+# # Displaying logos at the top
+# col1, col2, col3, col4, col5 = st.columns(5)
+# with col1:
+#     st.image("royaume_du_maroc_logo.png", width=200, output_format='auto')
 
-with col5:
-    st.image("logo_pmp.png", width=75, output_format='auto')
+# with col5:
+#     st.image("logo_pmp.png", width=75, output_format='auto')
 
 
 st.title("المساعد الخاص برئاسة النيابة العامة")
