@@ -101,18 +101,7 @@ if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟
             # Read the response in chunks and write to the file
             for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                 f.write(chunk)
-        # Initialize pygame mixer
-        pygame.mixer.init()
-
-        # Load your MP3 file
-        pygame.mixer.music.load('output.mp3')
-
-        # Play the MP3 file
-        pygame.mixer.music.play()
-
-        # Keep the script running until the music is playing
-        while pygame.mixer.music.get_busy():
-            pygame.time.Clock().tick(10)
+        st.audio("output.mp3", format="audio/mpeg", loop=True)
     else:
         # Print the error message if the request was not successful
         print(response.text)
