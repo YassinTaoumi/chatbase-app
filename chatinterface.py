@@ -17,7 +17,7 @@ st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 
 # Displaying logos at the top
-col1, col2, col3, col4 = st.columns(5)
+col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     st.image("royaume_du_maroc_logo.png", width=200, output_format='auto')
 
