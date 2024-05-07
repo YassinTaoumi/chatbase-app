@@ -117,13 +117,13 @@ def send_message(text):
 if len(st.session_state.messages) == 0:
     col1, col2, col3 = st.columns(3)
     with col1:
-        if prompt1 := st.chat_input("Hi"):
+        with st.popover("Hi"):
             send_message("Hi")
     with col2:
-        if prompt1 := st.chat_input("Help"):
+        with st.popover('Help'):
             send_message("Help")
     with col3:
-        if prompt1 := st.chat_input("More Info"):
+        with st.popover("More Info"):
             send_message("More Info")
 # Input from user
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
