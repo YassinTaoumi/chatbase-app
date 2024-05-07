@@ -7,7 +7,7 @@ CHUNK_SIZE = 1024  # Size of chunks to read/write at a time
 XI_API_KEY = "60747453e253e4abae809501c989569c"  # Your API key for authentication
 VOICE_ID = "XB0fDUnXU5powFXDhCwa"  # ID of the voice model to use
 # Text you want to convert to speech
-TEXT_TO_SPEAK = "القانون المدني المغربي يُعدّ جزءًا أساسيًا من النظام القانوني في المغرب، ويشتمل على مجموعة واسعة من الأحكام التي تنظم العلاقات الخاصة بين الأفراد. "
+# TEXT_TO_SPEAK = "text"
 OUTPUT_PATH = "output.mp3"  # Path to save the output audio file
 
 # Construct the URL for the Text-to-Speech API request
