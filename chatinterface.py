@@ -114,7 +114,7 @@ def send_message(text):
         {"role": "assistant", "content": assistant_message})
 
 
-if st.session_state.messages.length == 0:
+if len(st.session_state.messages) == 0:
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("Hi"):
