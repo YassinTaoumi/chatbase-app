@@ -114,20 +114,19 @@ def send_message(text):
         {"role": "assistant", "content": assistant_message})
 
 
-if len(st.session_state.messages) == 0:
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button("Hi"):
-            send_message("Hi")
-    with col2:
-        if st.button("Help"):
-            send_message("Help")
-    with col3:
-        if st.button("More Info"):
-            send_message("More Info")
-
 # Input from user
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
+    if len(st.session_state.messages) == 0:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.button("Hi"):
+                send_message("Hi")
+        with col2:
+            if st.button("Help"):
+                send_message("Help")
+        with col3:
+            if st.button("More Info"):
+                send_message("More Info")
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
