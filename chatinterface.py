@@ -114,17 +114,17 @@ def send_message(text):
         {"role": "assistant", "content": assistant_message})
 
 
-if len(st.session_state.messages) == 0:
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        with st.popover("Hi"):
-            send_message("Hi")
-    with col2:
-        with st.popover('Help'):
-            send_message("Help")
-    with col3:
-        with st.popover("More Info"):
-            send_message("More Info")
+# if len(st.session_state.messages) == 0:
+#     col1, col2, col3 = st.columns(3)
+#     with col1:
+#         with st.popover("Hi"):
+#             send_message("Hi")
+#     with col2:
+#         with st.popover('Help'):
+#             send_message("Help")
+#     with col3:
+#         with st.popover("More Info"):
+#             send_message("More Info")
 # Input from user
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
 
