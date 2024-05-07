@@ -14,12 +14,14 @@ OUTPUT_PATH = "output.mp3"
 with open('style.css') as f:
     css = f.read()
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+
+
 # Displaying logos at the top
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4 = st.columns(5)
 with col1:
     st.image("royaume_du_maroc_logo.png", width=200, output_format='auto')
 
-with col4:
+with col5:
     st.image("logo_pmp.png", width=75, output_format='auto')
 
 
