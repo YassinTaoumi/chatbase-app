@@ -1,2 +1,2 @@
-import pygame
-print(pygame.__version__)
+import streamlit as st
+print(st.__version__)
