@@ -86,5 +86,27 @@
         style="width: 50%"
       ></iframe>
     </div>
+    <script>
+      // Create a new Audio object
+      var myAudio = new Audio("hello3.mp3"); // Replace with the path to your audio file
+
+      // Function to play the audio
+      function playAudio() {
+        myAudio
+          .play()
+          .then(() => {
+            console.log("Audio started!");
+          })
+          .catch((error) => {
+            console.error("Error playing the audio:", error);
+          });
+      }
+
+      // Play the audio for the first time immediately
+      playAudio();
+
+      // Set interval to play the audio every 60000 milliseconds (1 minute)
+      setInterval(playAudio, 60000);
+    </script>
   </body>
 </html>
