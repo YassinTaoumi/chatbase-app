@@ -136,7 +136,7 @@ if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟
     data = {
         "messages": [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
         # Replace <Chatbot-ID> with your actual Chatbot ID
-        "chatbotId": "vaWO65hVvRo2NLzhDF6mu",
+        "chatbotId": "SWpEOqL4gCfe-GXJtvHUU",
         "stream": False,
         "temperature": 0
     }
