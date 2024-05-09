@@ -49,6 +49,7 @@ for message in st.session_state.messages:
 
 
 def send_message(text):
+    prompt = text
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
