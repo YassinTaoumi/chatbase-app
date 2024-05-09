@@ -122,15 +122,17 @@ def send_message(text):
 
 if len(st.session_state.messages) == 0:
     col1, col2, col3 = st.columns(3)
+    text = ""
     with col1:
         if st.button("Hi"):
-            send_message("Hi")
+            text = "HI"
     with col2:
         if st.button('Help'):
-            send_message("Help")
+            text = "Help"
     with col3:
         if st.button("More Info"):
-            send_message("More Info")
+            text = "More Info"
+    send_message(text)
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
 
     st.session_state.messages.append({"role": "user", "content": prompt})
