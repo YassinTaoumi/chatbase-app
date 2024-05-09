@@ -125,7 +125,8 @@ if len(st.session_state.messages) == 0:
         st.session_state.button_clicked = None
 
     # Define the labels for your buttons
-    button_labels = ["Hi", "Help", "Learn More"]
+    button_labels = ["ما هي اجراءات المساعدة القضائية", "كيف يمكن للمواطن التبليغ عن الرشوة برئاسة النيابة العامة",
+                     "ما هي اجراءات رد الاعتبار"]
 
     # Setup columns with buttons
     columns = st.columns(len(button_labels))
@@ -138,6 +139,7 @@ if len(st.session_state.messages) == 0:
     # Display message outside of the columns based on which button was clicked
     if st.session_state.button_clicked:
         send_message(st.session_state.button_clicked)
+
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
 
     st.session_state.messages.append({"role": "user", "content": prompt})
