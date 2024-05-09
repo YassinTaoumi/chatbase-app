@@ -49,6 +49,11 @@ for message in st.session_state.messages:
 
 
 def send_message(text):
+    headers = headers = {
+        # Replace <API-KEY> with your actual API key
+        'Authorization': 'Bearer '+st.secrets["chatbase_api_key"],
+        'Content-Type': 'application/json'
+    }
     prompt = text
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
