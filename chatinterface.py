@@ -121,18 +121,23 @@ def send_message(text):
 
 
 if len(st.session_state.messages) == 0:
-    col1, col2, col3 = st.columns(3)
-    text = ""
-    with col1:
-        if st.button("Hi"):
-            text = "HI"
-    with col2:
-        if st.button('Help'):
-            text = "Help"
-    with col3:
-        if st.button("More Info"):
-            text = "More Info"
-    send_message(text)
+    if 'button_clicked' not in st.session_state:
+        st.session_state.button_clicked = None
+
+    # Define the labels for your buttons
+    button_labels = ["Hi", "Help", "Learn More"]
+
+    # Setup columns with buttons
+    columns = st.columns(len(button_labels))
+    for i, col in enumerate(columns):
+        with col:
+            # When a button is clicked, update the session state to the button's label
+            if st.button(button_labels[i]):
+                st.session_state.button_clicked = button_labels[i]
+
+    # Display message outside of the columns based on which button was clicked
+    if st.session_state.button_clicked:
+        send_message(st.session_state.button_clicked)
 if prompt := st.chat_input("أهلاً! بماذا يمكنني مساعدتك؟"):
 
     st.session_state.messages.append({"role": "user", "content": prompt})
