@@ -4,7 +4,9 @@ body {
   background-image: url("moroccanPattern.jpg");
   background-repeat: repeat;
 }
-
+#GithubIcon {
+  visibility: hidden;
+}
 body,
 [class*="css"] {
   text-align: right;
